@@ -11,7 +11,8 @@ typealias OnboardEntryPoint = OnboardVCDelegate & UIViewController
 
 protocol OnboardRouterDelegate: AnyObject {
     var entry: OnboardEntryPoint? { get }
-
+    
+    static func start() -> OnboardRouterDelegate
     func navigateToMain(from view: OnboardVCDelegate?)
 }
 

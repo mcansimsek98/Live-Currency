@@ -26,4 +26,12 @@ class BaseVC: UIViewController {
         alert.addAction(cancelAction)
         present(alert, animated: true)
     }
+    
+    func goBackAction() {
+        if let nav = navigationController {
+            nav.popViewController(animated: true)
+        }else{
+            dismiss(animated: true, completion: nil)
+        }
+    }
 }

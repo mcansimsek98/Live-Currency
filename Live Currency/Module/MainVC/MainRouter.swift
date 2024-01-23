@@ -11,7 +11,9 @@ typealias MainEntryPoint = MainVCDelegate & UIViewController
 
 protocol MainRouterDelegate: AnyObject {
     var entry: MainEntryPoint? { get }
+    
     static func start() -> MainRouterDelegate
+    func navigateToDetail(from view: MainVCDelegate?, _ unitName: String)
 }
 
 class MainRouter: MainRouterDelegate {
@@ -32,5 +34,12 @@ class MainRouter: MainRouterDelegate {
         
         router.entry = view as? MainEntryPoint
         return router
+    }
+    
+    func navigateToDetail(from view: MainVCDelegate?, _ unitName: String) {
+        let detailRouter = DetailRouter.start(unitName: unitName)
+        guard let vc = view as? UIViewController,
+              let destinationVC = detailRouter.entry else { return }
+        vc.navigationController?.pushViewController(destinationVC, animated: true)
     }
 }

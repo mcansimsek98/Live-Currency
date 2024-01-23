@@ -12,6 +12,7 @@ protocol MainPresenterDelegate: AnyObject {
     var view: MainVCDelegate? { get set }
     var interactor: MainInteractorDelegate? { get set }
     
+    func gotoDetailVC(unitName: String)
     func interactorDidFetchCurrency(with result: Result<MainEntity, Error>)
     func updateCurencies(from: String)
     func convertCurrencies(from: String, to: String, amount: Int)
@@ -24,6 +25,10 @@ class MainPresenter: MainPresenterDelegate {
         didSet {
             interactor?.getAllCurency(from: "TRY")
         }
+    }
+    
+    func gotoDetailVC(unitName: String) {
+        router?.navigateToDetail(from: view, unitName)
     }
     
     func updateCurencies(from: String) {

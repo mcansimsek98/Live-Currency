@@ -43,6 +43,10 @@
 		B29502B82B5FE244001FBEEE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B72B5FE244001FBEEE /* WelcomeView.swift */; };
 		B29502BA2B5FE250001FBEEE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B92B5FE250001FBEEE /* LoginView.swift */; };
 		B29502BC2B5FFBA5001FBEEE /* OnBoardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502BB2B5FFBA5001FBEEE /* OnBoardInteractor.swift */; };
+		B29502BF2B60336F001FBEEE /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502BE2B60336F001FBEEE /* DetailVC.swift */; };
+		B29502C12B60337F001FBEEE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502C02B60337F001FBEEE /* DetailPresenter.swift */; };
+		B29502C32B60338E001FBEEE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502C22B60338E001FBEEE /* DetailInteractor.swift */; };
+		B29502C52B60339A001FBEEE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502C42B60339A001FBEEE /* DetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		B29502B72B5FE244001FBEEE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		B29502B92B5FE250001FBEEE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B29502BB2B5FFBA5001FBEEE /* OnBoardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardInteractor.swift; sourceTree = "<group>"; };
+		B29502BE2B60336F001FBEEE /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		B29502C02B60337F001FBEEE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		B29502C22B60338E001FBEEE /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		B29502C42B60339A001FBEEE /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,7 @@
 			children = (
 				B29502AF2B5FE1A9001FBEEE /* OnBoardVC */,
 				B20C3E112B5E7C71005AFCB7 /* MainVC */,
+				B29502BD2B603354001FBEEE /* DetailVC */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -299,6 +308,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B29502BD2B603354001FBEEE /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				B29502BE2B60336F001FBEEE /* DetailVC.swift */,
+				B29502C02B60337F001FBEEE /* DetailPresenter.swift */,
+				B29502C22B60338E001FBEEE /* DetailInteractor.swift */,
+				B29502C42B60339A001FBEEE /* DetailRouter.swift */,
+			);
+			path = DetailVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,6 +398,7 @@
 			files = (
 				B20C3E482B5EDF4B005AFCB7 /* API.swift in Sources */,
 				B20C3E272B5E8FD4005AFCB7 /* ButtonSize.swift in Sources */,
+				B29502BF2B60336F001FBEEE /* DetailVC.swift in Sources */,
 				B20C3E292B5E8FE7005AFCB7 /* FontSize.swift in Sources */,
 				B20C3E572B5EEE49005AFCB7 /* BaseVC.swift in Sources */,
 				B20C3DFB2B5E7966005AFCB7 /* AppDelegate.swift in Sources */,
@@ -386,6 +407,7 @@
 				B20C3E2B2B5E9029005AFCB7 /* Radius.swift in Sources */,
 				B20C3E422B5EB984005AFCB7 /* UITextField+Extension.swift in Sources */,
 				B20C3E1B2B5E7CFB005AFCB7 /* MainRouter.swift in Sources */,
+				B29502C32B60338E001FBEEE /* DetailInteractor.swift in Sources */,
 				B29502B12B5FE205001FBEEE /* OnboardPresenter.swift in Sources */,
 				B20C3E132B5E7C8A005AFCB7 /* MainVC.swift in Sources */,
 				B20C3E602B5F0E3F005AFCB7 /* CurrenciesCell.swift in Sources */,
@@ -407,7 +429,9 @@
 				B29502B32B5FE224001FBEEE /* OnboardRouter.swift in Sources */,
 				B20C3E322B5E90CB005AFCB7 /* UIFont+Extension.swift in Sources */,
 				B20C3E5A2B5EEEC9005AFCB7 /* CurrenciesList.swift in Sources */,
+				B29502C52B60339A001FBEEE /* DetailRouter.swift in Sources */,
 				B20C3E192B5E7CE1005AFCB7 /* MainInteractor.swift in Sources */,
+				B29502C12B60337F001FBEEE /* DetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -61,6 +61,11 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         cell.configure(title: item.0, from: from, to: "\(String(format: "%.3f", to))")
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = filteredCurrenciesList.compactMap({ ($0.key, $0.value)})[indexPath.row]
+        presenter?.gotoDetailVC(unitName: item.0)
+    }
 }
 
 //MARK: HomeViewDelegate
