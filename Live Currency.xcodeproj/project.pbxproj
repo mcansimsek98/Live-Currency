@@ -9,21 +9,79 @@
 /* Begin PBXBuildFile section */
 		B20C3DFB2B5E7966005AFCB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3DFA2B5E7966005AFCB7 /* AppDelegate.swift */; };
 		B20C3DFD2B5E7966005AFCB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3DFC2B5E7966005AFCB7 /* SceneDelegate.swift */; };
-		B20C3DFF2B5E7966005AFCB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3DFE2B5E7966005AFCB7 /* ViewController.swift */; };
-		B20C3E022B5E7966005AFCB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20C3E002B5E7966005AFCB7 /* Main.storyboard */; };
 		B20C3E042B5E7967005AFCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20C3E032B5E7967005AFCB7 /* Assets.xcassets */; };
 		B20C3E072B5E7967005AFCB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B20C3E052B5E7967005AFCB7 /* LaunchScreen.storyboard */; };
+		B20C3E132B5E7C8A005AFCB7 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E122B5E7C8A005AFCB7 /* MainVC.swift */; };
+		B20C3E152B5E7CBF005AFCB7 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E142B5E7CBF005AFCB7 /* MainPresenter.swift */; };
+		B20C3E192B5E7CE1005AFCB7 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E182B5E7CE1005AFCB7 /* MainInteractor.swift */; };
+		B20C3E1B2B5E7CFB005AFCB7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E1A2B5E7CFB005AFCB7 /* MainRouter.swift */; };
+		B20C3E232B5E8F4B005AFCB7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E222B5E8F4B005AFCB7 /* MainView.swift */; };
+		B20C3E272B5E8FD4005AFCB7 /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E262B5E8FD4005AFCB7 /* ButtonSize.swift */; };
+		B20C3E292B5E8FE7005AFCB7 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E282B5E8FE7005AFCB7 /* FontSize.swift */; };
+		B20C3E2B2B5E9029005AFCB7 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E2A2B5E9029005AFCB7 /* Radius.swift */; };
+		B20C3E2E2B5E9042005AFCB7 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E2D2B5E9042005AFCB7 /* Theme.swift */; };
+		B20C3E322B5E90CB005AFCB7 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E312B5E90CB005AFCB7 /* UIFont+Extension.swift */; };
+		B20C3E342B5E90E1005AFCB7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E332B5E90E1005AFCB7 /* UIView+Extension.swift */; };
+		B20C3E362B5E90F1005AFCB7 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E352B5E90F1005AFCB7 /* UIWindow+Extension.swift */; };
+		B20C3E382B5E9101005AFCB7 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E372B5E9101005AFCB7 /* UIScreen+Extension.swift */; };
+		B20C3E3A2B5E91E3005AFCB7 /* PaddingSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E392B5E91E3005AFCB7 /* PaddingSize.swift */; };
+		B20C3E3E2B5EB35D005AFCB7 /* CustomAlertTableViewWithCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E3D2B5EB35D005AFCB7 /* CustomAlertTableViewWithCompletion.swift */; };
+		B20C3E402B5EB3E8005AFCB7 /* UIAlertController+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E3F2B5EB3E8005AFCB7 /* UIAlertController+AlertController.swift */; };
+		B20C3E422B5EB984005AFCB7 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E412B5EB984005AFCB7 /* UITextField+Extension.swift */; };
+		B20C3E462B5EDF3D005AFCB7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E452B5EDF3D005AFCB7 /* NetworkManager.swift */; };
+		B20C3E482B5EDF4B005AFCB7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E472B5EDF4B005AFCB7 /* API.swift */; };
+		B20C3E4B2B5EE065005AFCB7 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = B20C3E4A2B5EE065005AFCB7 /* CombineMoya */; };
+		B20C3E4D2B5EE065005AFCB7 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B20C3E4C2B5EE065005AFCB7 /* Moya */; };
+		B20C3E542B5EE9A5005AFCB7 /* MainEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E532B5EE9A5005AFCB7 /* MainEntity.swift */; };
+		B20C3E572B5EEE49005AFCB7 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E562B5EEE49005AFCB7 /* BaseVC.swift */; };
+		B20C3E5A2B5EEEC9005AFCB7 /* CurrenciesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E592B5EEEC9005AFCB7 /* CurrenciesList.swift */; };
+		B20C3E602B5F0E3F005AFCB7 /* CurrenciesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E5F2B5F0E3F005AFCB7 /* CurrenciesCell.swift */; };
+		B20C3E622B5FAD70005AFCB7 /* HomeViewTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E612B5FAD70005AFCB7 /* HomeViewTVCell.swift */; };
+		B29502B12B5FE205001FBEEE /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B02B5FE205001FBEEE /* OnboardPresenter.swift */; };
+		B29502B32B5FE224001FBEEE /* OnboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B22B5FE224001FBEEE /* OnboardRouter.swift */; };
+		B29502B52B5FE22C001FBEEE /* OnboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B42B5FE22C001FBEEE /* OnboardVC.swift */; };
+		B29502B82B5FE244001FBEEE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B72B5FE244001FBEEE /* WelcomeView.swift */; };
+		B29502BA2B5FE250001FBEEE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B92B5FE250001FBEEE /* LoginView.swift */; };
+		B29502BC2B5FFBA5001FBEEE /* OnBoardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502BB2B5FFBA5001FBEEE /* OnBoardInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B20C3DF72B5E7966005AFCB7 /* Live Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Live Currency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20C3DFA2B5E7966005AFCB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B20C3DFC2B5E7966005AFCB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B20C3DFE2B5E7966005AFCB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B20C3E012B5E7966005AFCB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B20C3E032B5E7967005AFCB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B20C3E062B5E7967005AFCB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B20C3E082B5E7967005AFCB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B20C3E122B5E7C8A005AFCB7 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		B20C3E142B5E7CBF005AFCB7 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		B20C3E182B5E7CE1005AFCB7 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		B20C3E1A2B5E7CFB005AFCB7 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		B20C3E222B5E8F4B005AFCB7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B20C3E262B5E8FD4005AFCB7 /* ButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
+		B20C3E282B5E8FE7005AFCB7 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		B20C3E2A2B5E9029005AFCB7 /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
+		B20C3E2D2B5E9042005AFCB7 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B20C3E312B5E90CB005AFCB7 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B20C3E332B5E90E1005AFCB7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B20C3E352B5E90F1005AFCB7 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		B20C3E372B5E9101005AFCB7 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
+		B20C3E392B5E91E3005AFCB7 /* PaddingSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingSize.swift; sourceTree = "<group>"; };
+		B20C3E3D2B5EB35D005AFCB7 /* CustomAlertTableViewWithCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertTableViewWithCompletion.swift; sourceTree = "<group>"; };
+		B20C3E3F2B5EB3E8005AFCB7 /* UIAlertController+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertController.swift"; sourceTree = "<group>"; };
+		B20C3E412B5EB984005AFCB7 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		B20C3E452B5EDF3D005AFCB7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B20C3E472B5EDF4B005AFCB7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B20C3E532B5EE9A5005AFCB7 /* MainEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEntity.swift; sourceTree = "<group>"; };
+		B20C3E562B5EEE49005AFCB7 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		B20C3E592B5EEEC9005AFCB7 /* CurrenciesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesList.swift; sourceTree = "<group>"; };
+		B20C3E5F2B5F0E3F005AFCB7 /* CurrenciesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesCell.swift; sourceTree = "<group>"; };
+		B20C3E612B5FAD70005AFCB7 /* HomeViewTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTVCell.swift; sourceTree = "<group>"; };
+		B29502B02B5FE205001FBEEE /* OnboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPresenter.swift; sourceTree = "<group>"; };
+		B29502B22B5FE224001FBEEE /* OnboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardRouter.swift; sourceTree = "<group>"; };
+		B29502B42B5FE22C001FBEEE /* OnboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardVC.swift; sourceTree = "<group>"; };
+		B29502B72B5FE244001FBEEE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		B29502B92B5FE250001FBEEE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B29502BB2B5FFBA5001FBEEE /* OnBoardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20C3E4D2B5EE065005AFCB7 /* Moya in Frameworks */,
+				B20C3E4B2B5EE065005AFCB7 /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +116,187 @@
 		B20C3DF92B5E7966005AFCB7 /* Live Currency */ = {
 			isa = PBXGroup;
 			children = (
+				B20C3E0E2B5E7C12005AFCB7 /* App */,
+				B20C3E0F2B5E7C32005AFCB7 /* Configuration */,
+				B20C3E242B5E8FBE005AFCB7 /* Common */,
+				B20C3E3B2B5EB345005AFCB7 /* CustomViews */,
+				B20C3E302B5E90BB005AFCB7 /* Extension */,
+				B20C3E432B5EDF1B005AFCB7 /* Network */,
+				B20C3E522B5EE98B005AFCB7 /* Entity */,
+				B20C3E552B5EEE40005AFCB7 /* BaseVC */,
+				B20C3E5E2B5F0E2D005AFCB7 /* Cell */,
+				B20C3E102B5E7C64005AFCB7 /* Module */,
+			);
+			path = "Live Currency";
+			sourceTree = "<group>";
+		};
+		B20C3E0E2B5E7C12005AFCB7 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				B20C3DFA2B5E7966005AFCB7 /* AppDelegate.swift */,
 				B20C3DFC2B5E7966005AFCB7 /* SceneDelegate.swift */,
-				B20C3DFE2B5E7966005AFCB7 /* ViewController.swift */,
-				B20C3E002B5E7966005AFCB7 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B20C3E0F2B5E7C32005AFCB7 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
 				B20C3E032B5E7967005AFCB7 /* Assets.xcassets */,
 				B20C3E052B5E7967005AFCB7 /* LaunchScreen.storyboard */,
 				B20C3E082B5E7967005AFCB7 /* Info.plist */,
 			);
-			path = "Live Currency";
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		B20C3E102B5E7C64005AFCB7 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B29502AF2B5FE1A9001FBEEE /* OnBoardVC */,
+				B20C3E112B5E7C71005AFCB7 /* MainVC */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		B20C3E112B5E7C71005AFCB7 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E212B5E8F43005AFCB7 /* View */,
+				B20C3E122B5E7C8A005AFCB7 /* MainVC.swift */,
+				B20C3E142B5E7CBF005AFCB7 /* MainPresenter.swift */,
+				B20C3E182B5E7CE1005AFCB7 /* MainInteractor.swift */,
+				B20C3E1A2B5E7CFB005AFCB7 /* MainRouter.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		B20C3E212B5E8F43005AFCB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E222B5E8F4B005AFCB7 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B20C3E242B5E8FBE005AFCB7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E582B5EEE78005AFCB7 /* CurrenciesList */,
+				B20C3E2C2B5E9039005AFCB7 /* Theme */,
+				B20C3E252B5E8FC5005AFCB7 /* Size */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B20C3E252B5E8FC5005AFCB7 /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E262B5E8FD4005AFCB7 /* ButtonSize.swift */,
+				B20C3E282B5E8FE7005AFCB7 /* FontSize.swift */,
+				B20C3E2A2B5E9029005AFCB7 /* Radius.swift */,
+				B20C3E392B5E91E3005AFCB7 /* PaddingSize.swift */,
+			);
+			path = Size;
+			sourceTree = "<group>";
+		};
+		B20C3E2C2B5E9039005AFCB7 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E2D2B5E9042005AFCB7 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		B20C3E302B5E90BB005AFCB7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E312B5E90CB005AFCB7 /* UIFont+Extension.swift */,
+				B20C3E332B5E90E1005AFCB7 /* UIView+Extension.swift */,
+				B20C3E352B5E90F1005AFCB7 /* UIWindow+Extension.swift */,
+				B20C3E372B5E9101005AFCB7 /* UIScreen+Extension.swift */,
+				B20C3E3F2B5EB3E8005AFCB7 /* UIAlertController+AlertController.swift */,
+				B20C3E412B5EB984005AFCB7 /* UITextField+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B20C3E3B2B5EB345005AFCB7 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E3C2B5EB34F005AFCB7 /* CustomAlertView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		B20C3E3C2B5EB34F005AFCB7 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E3D2B5EB35D005AFCB7 /* CustomAlertTableViewWithCompletion.swift */,
+			);
+			path = CustomAlertView;
+			sourceTree = "<group>";
+		};
+		B20C3E432B5EDF1B005AFCB7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E452B5EDF3D005AFCB7 /* NetworkManager.swift */,
+				B20C3E472B5EDF4B005AFCB7 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B20C3E522B5EE98B005AFCB7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E532B5EE9A5005AFCB7 /* MainEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B20C3E552B5EEE40005AFCB7 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E562B5EEE49005AFCB7 /* BaseVC.swift */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		B20C3E582B5EEE78005AFCB7 /* CurrenciesList */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E592B5EEEC9005AFCB7 /* CurrenciesList.swift */,
+			);
+			path = CurrenciesList;
+			sourceTree = "<group>";
+		};
+		B20C3E5E2B5F0E2D005AFCB7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B20C3E5F2B5F0E3F005AFCB7 /* CurrenciesCell.swift */,
+				B20C3E612B5FAD70005AFCB7 /* HomeViewTVCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B29502AF2B5FE1A9001FBEEE /* OnBoardVC */ = {
+			isa = PBXGroup;
+			children = (
+				B29502B62B5FE232001FBEEE /* View */,
+				B29502B42B5FE22C001FBEEE /* OnboardVC.swift */,
+				B29502B02B5FE205001FBEEE /* OnboardPresenter.swift */,
+				B29502B22B5FE224001FBEEE /* OnboardRouter.swift */,
+				B29502BB2B5FFBA5001FBEEE /* OnBoardInteractor.swift */,
+			);
+			path = OnBoardVC;
+			sourceTree = "<group>";
+		};
+		B29502B62B5FE232001FBEEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B29502B72B5FE244001FBEEE /* WelcomeView.swift */,
+				B29502B92B5FE250001FBEEE /* LoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +315,10 @@
 			dependencies = (
 			);
 			name = "Live Currency";
+			packageProductDependencies = (
+				B20C3E4A2B5EE065005AFCB7 /* CombineMoya */,
+				B20C3E4C2B5EE065005AFCB7 /* Moya */,
+			);
 			productName = "Live Currency";
 			productReference = B20C3DF72B5E7966005AFCB7 /* Live Currency.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +347,9 @@
 				Base,
 			);
 			mainGroup = B20C3DEE2B5E7966005AFCB7;
+			packageReferences = (
+				B20C3E492B5EE065005AFCB7 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = B20C3DF82B5E7966005AFCB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +366,6 @@
 			files = (
 				B20C3E072B5E7967005AFCB7 /* LaunchScreen.storyboard in Resources */,
 				B20C3E042B5E7967005AFCB7 /* Assets.xcassets in Resources */,
-				B20C3E022B5E7966005AFCB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +376,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B20C3DFF2B5E7966005AFCB7 /* ViewController.swift in Sources */,
+				B20C3E482B5EDF4B005AFCB7 /* API.swift in Sources */,
+				B20C3E272B5E8FD4005AFCB7 /* ButtonSize.swift in Sources */,
+				B20C3E292B5E8FE7005AFCB7 /* FontSize.swift in Sources */,
+				B20C3E572B5EEE49005AFCB7 /* BaseVC.swift in Sources */,
 				B20C3DFB2B5E7966005AFCB7 /* AppDelegate.swift in Sources */,
+				B20C3E462B5EDF3D005AFCB7 /* NetworkManager.swift in Sources */,
+				B20C3E232B5E8F4B005AFCB7 /* MainView.swift in Sources */,
+				B20C3E2B2B5E9029005AFCB7 /* Radius.swift in Sources */,
+				B20C3E422B5EB984005AFCB7 /* UITextField+Extension.swift in Sources */,
+				B20C3E1B2B5E7CFB005AFCB7 /* MainRouter.swift in Sources */,
+				B29502B12B5FE205001FBEEE /* OnboardPresenter.swift in Sources */,
+				B20C3E132B5E7C8A005AFCB7 /* MainVC.swift in Sources */,
+				B20C3E602B5F0E3F005AFCB7 /* CurrenciesCell.swift in Sources */,
+				B20C3E3E2B5EB35D005AFCB7 /* CustomAlertTableViewWithCompletion.swift in Sources */,
 				B20C3DFD2B5E7966005AFCB7 /* SceneDelegate.swift in Sources */,
+				B20C3E342B5E90E1005AFCB7 /* UIView+Extension.swift in Sources */,
+				B29502B52B5FE22C001FBEEE /* OnboardVC.swift in Sources */,
+				B20C3E542B5EE9A5005AFCB7 /* MainEntity.swift in Sources */,
+				B29502BC2B5FFBA5001FBEEE /* OnBoardInteractor.swift in Sources */,
+				B20C3E382B5E9101005AFCB7 /* UIScreen+Extension.swift in Sources */,
+				B20C3E622B5FAD70005AFCB7 /* HomeViewTVCell.swift in Sources */,
+				B20C3E152B5E7CBF005AFCB7 /* MainPresenter.swift in Sources */,
+				B20C3E402B5EB3E8005AFCB7 /* UIAlertController+AlertController.swift in Sources */,
+				B29502BA2B5FE250001FBEEE /* LoginView.swift in Sources */,
+				B20C3E2E2B5E9042005AFCB7 /* Theme.swift in Sources */,
+				B20C3E362B5E90F1005AFCB7 /* UIWindow+Extension.swift in Sources */,
+				B20C3E3A2B5E91E3005AFCB7 /* PaddingSize.swift in Sources */,
+				B29502B82B5FE244001FBEEE /* WelcomeView.swift in Sources */,
+				B29502B32B5FE224001FBEEE /* OnboardRouter.swift in Sources */,
+				B20C3E322B5E90CB005AFCB7 /* UIFont+Extension.swift in Sources */,
+				B20C3E5A2B5EEEC9005AFCB7 /* CurrenciesList.swift in Sources */,
+				B20C3E192B5E7CE1005AFCB7 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B20C3E002B5E7966005AFCB7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B20C3E012B5E7966005AFCB7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B20C3E052B5E7967005AFCB7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +556,7 @@
 				INFOPLIST_FILE = "Live Currency/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +584,7 @@
 				INFOPLIST_FILE = "Live Currency/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +622,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B20C3E492B5EE065005AFCB7 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B20C3E4A2B5EE065005AFCB7 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B20C3E492B5EE065005AFCB7 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		B20C3E4C2B5EE065005AFCB7 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B20C3E492B5EE065005AFCB7 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B20C3DEF2B5E7966005AFCB7 /* Project object */;
 }
