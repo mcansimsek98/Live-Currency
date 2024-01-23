@@ -11,6 +11,7 @@ protocol HomeViewDelegate: AnyObject {
     func searchBtnAction(with searchText: String)
     func unitBtnAction()
     func unitSecondBtnAction()
+    func refreshButtonAction()
 }
 
 class HomeView: UIView {
@@ -212,6 +213,16 @@ class HomeView: UIView {
         }
     }
     
+    private lazy var refreshButton: UIButton = {
+        let btn = UIButton()
+        btn.setImage(.refresh, for: .normal)
+        btn.transform = CGAffineTransform(rotationAngle: 0)
+        btn.layer.cornerRadius = Radius.small.rawValue
+        btn.addAction(refreshButtonAction, for: .touchUpInside)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
+    
     private lazy var searchBtnAction: UIAction = UIAction { [weak self] _ in
         guard let self else { return }
         delegate?.searchBtnAction(with: searchTextField.text ?? "")
@@ -225,6 +236,22 @@ class HomeView: UIView {
     private lazy var unitSecondBtnAction: UIAction = UIAction { [weak self] _ in
         guard let self else { return }
         delegate?.unitSecondBtnAction()
+    }
+    
+    private lazy var refreshButtonAction: UIAction = UIAction { [weak self] _ in
+        guard let self else { return }
+        UIView.animateKeyframes(withDuration: 1, delay: 0, options: [], animations: {
+            for i in 0...8 {
+                let startTime = Double(i) * 0.5 / 8.0
+                let endTime = Double(i + 1) * 0.5 / 8.0
+
+                UIView.addKeyframe(withRelativeStartTime: startTime, relativeDuration: endTime - startTime, animations: {
+                    let rotationAngle: CGFloat = .pi / 4
+                    self.refreshButton.transform = self.refreshButton.transform.rotated(by: rotationAngle)
+                })
+            }
+        }, completion: nil)
+        delegate?.refreshButtonAction()
     }
     
     lazy var updateTime: String = "" {
@@ -247,7 +274,7 @@ class HomeView: UIView {
     init() {
         super.init(frame: .zero)
         backgroundColor = Theme.defaultTheme.themeColor.backgroundColor
-        addSubViews(filterButton, profileTitleLbl, welcomeLbl, contentViewForSearchAndFilter, updateLbl, tableView)
+        addSubViews(filterButton, profileTitleLbl, welcomeLbl, refreshButton, contentViewForSearchAndFilter, updateLbl, tableView)
         searchContentView.addSubViews(searchTextField, searchButton)
         unitContentView.addSubViews(fromLbl, unitLabel, unitButton)
         unitSecondContentView.addSubViews(toLbl, unitSecondLabel, unitSecondButton)
@@ -270,7 +297,10 @@ class HomeView: UIView {
             
             profileTitleLbl.topAnchor.constraint(equalTo: welcomeLbl.bottomAnchor, constant: Padding.small.rawValue),
             profileTitleLbl.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: Padding.medium.rawValue),
- 
+            
+            refreshButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Padding.small.rawValue),
+            refreshButton.rightAnchor.constraint(equalTo: filterButton.leftAnchor, constant: -Padding.large.rawValue),
+
             searchButton.topAnchor.constraint(equalTo: searchContentView.topAnchor),
             searchButton.bottomAnchor.constraint(equalTo: searchContentView.bottomAnchor),
             searchButton.rightAnchor.constraint(equalTo: searchContentView.rightAnchor),

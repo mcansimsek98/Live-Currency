@@ -15,7 +15,6 @@ protocol MainPresenterDelegate: AnyObject {
     func gotoDetailVC(unitName: String)
     func interactorDidFetchCurrency(with result: Result<MainEntity, Error>)
     func updateCurencies(from: String)
-    func convertCurrencies(from: String, to: String, amount: Int)
 }
 
 class MainPresenter: MainPresenterDelegate {
@@ -41,12 +40,12 @@ class MainPresenter: MainPresenterDelegate {
             let data = currencies.results?.compactMap { key, value in
                 return MainEntityResult(key: key, value: value)
             } ?? []
-
+            
             let targetCurrencies = ["USD", "EUR", "TRY"]
             let (targets, others) = data.reduce(into: ([MainEntityResult](), [MainEntityResult]())) { result, element in
                 targetCurrencies.contains(element.key) ? result.0.append(element) : result.1.append(element)
             }
-
+            
             let sortedTargets = targets.sorted { target1, target2 in
                 guard let index1 = targetCurrencies.firstIndex(of: target1.key),
                       let index2 = targetCurrencies.firstIndex(of: target2.key) else {
@@ -54,15 +53,11 @@ class MainPresenter: MainPresenterDelegate {
                 }
                 return index1 < index2
             }
-
+            
             let sortedData = sortedTargets + others.sorted { $0.key < $1.key }
             view?.update(with: currencies, list: sortedData)
         case .failure:
             view?.update(with: "Somting went wrong")
         }
-    }
-    
-    func convertCurrencies(from: String, to: String, amount: Int) {
-        
     }
 }

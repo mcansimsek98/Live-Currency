@@ -18,6 +18,7 @@ class HomeViewTVCell: UITableViewCell {
     
     private lazy var titleLbl: UILabel = {
         let lbl = UILabel()
+        lbl.textAlignment = .left
         lbl.font = Theme.defaultTheme.themeFont.bodyFont.boldVersion
         lbl.textColor = Theme.defaultTheme.themeColor.textColor
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +27,7 @@ class HomeViewTVCell: UITableViewCell {
     
     private lazy var fromLbl: UILabel = {
         let lbl = UILabel()
-        lbl.textAlignment = .right
+        lbl.textAlignment = .center
         lbl.font = Theme.defaultTheme.themeFont.bodyFont.boldVersion
         lbl.textColor = Theme.defaultTheme.themeColor.textColor
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -53,12 +54,12 @@ class HomeViewTVCell: UITableViewCell {
     private lazy var stackView: UIStackView = {
         let stv = UIStackView()
         stv.axis = .horizontal
-        stv.distribution = .fillEqually
+        stv.distribution = .equalSpacing
         stv.spacing = Padding.small.rawValue
-        stv.addArrangedSubview(titleLbl)
         stv.addArrangedSubview(fromLbl)
         stv.addArrangedSubview(arrowRightIV)
         stv.addArrangedSubview(toLbl)
+        stv.addArrangedSubview(titleLbl)
         stv.translatesAutoresizingMaskIntoConstraints = false
         return stv
     }()
@@ -79,6 +80,11 @@ class HomeViewTVCell: UITableViewCell {
             stackView.rightAnchor.constraint(equalTo: contentview.rightAnchor, constant: -Padding.small.rawValue),
             stackView.leftAnchor.constraint(equalTo: contentview.leftAnchor, constant: Padding.medium.rawValue),
             stackView.bottomAnchor.constraint(equalTo: contentview.bottomAnchor, constant: -Padding.large.rawValue),
+            
+            titleLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.12),
+            fromLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.31),
+            arrowRightIV.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1),
+            toLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.31)
         ])
     }
     

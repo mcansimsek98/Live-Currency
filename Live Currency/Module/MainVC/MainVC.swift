@@ -9,7 +9,7 @@ import UIKit
 
 protocol MainVCDelegate: AnyObject {
     var presenter: MainPresenterDelegate? { get set }
-    func update(with currencies: MainEntity, list: [MainEntityResult])
+    func update(with currencies: MainEntity?, list: [MainEntityResult])
     func update(with error: String)
 }
 
@@ -25,6 +25,7 @@ class MainVC: BaseVC, MainVCDelegate {
         super.loadView()
         view = homeView
         homeView.delegate = self
+        homeView.amountTextField.delegate = self
         homeView.tableView.delegate = self
         homeView.tableView.dataSource = self
     }
@@ -33,11 +34,13 @@ class MainVC: BaseVC, MainVCDelegate {
         super.viewDidLoad()
     }
     
-    func update(with currencies: MainEntity, list: [MainEntityResult]) {
-        currenciesList = list.filter({$0.key != selectedUnitFrom.first})
-        filteredCurrenciesList = list.filter({$0.key != selectedUnitFrom.first})
+    func update(with currencies: MainEntity?, list: [MainEntityResult]) {
+        let data = list.filter({$0.key != selectedUnitFrom.first})
+        let amount = Double(homeView.amountTextField.text ?? "1") ?? 1
+        currenciesList = data.compactMap({MainEntityResult(key: $0.key, value: $0.value * amount)})
+        filteredCurrenciesList = data.compactMap({MainEntityResult(key: $0.key, value: $0.value * amount)})
+        homeView.updateTime = currencies?.updated ?? ""
         homeView.tableView.reloadData()
-        homeView.updateTime = currencies.updated ?? ""
     }
     
     func update(with error: String) {
@@ -57,8 +60,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewTVCell", for: indexPath) as! HomeViewTVCell
         let item = filteredCurrenciesList.compactMap({ ($0.key, $0.value)})[indexPath.row]
         let from = "\(homeView.amountTextField.text ?? "1") \(homeView.unitLabel.text ?? "TRY")"
-        let to = selectedUnitTo.first == "---" ? (item.1 * 1) : (item.1 * (Double(homeView.amountTextField.text ?? "1") ?? 1))
-        cell.configure(title: item.0, from: from, to: "\(String(format: "%.3f", to))")
+        cell.configure(title: item.0, from: from, to: String(format: "%.2f", item.1))
         return cell
     }
     
@@ -70,6 +72,13 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 
 //MARK: HomeViewDelegate
 extension MainVC: HomeViewDelegate {
+    func refreshButtonAction() {
+        homeView.amountTextField.text = "1"
+        homeView.unitSecondLabel.text = "---"
+        selectedUnitTo = []
+        presenter?.interactor?.getAllCurency(from: homeView.unitLabel.text ?? "TRY")
+    }
+    
     func searchBtnAction(with searchText: String) {
         guard searchText.count != 0 else {
             filteredCurrenciesList = currenciesList
@@ -106,11 +115,33 @@ extension MainVC: HomeViewDelegate {
         { [weak self] item, index in
             guard let self else { return }
             homeView.unitSecondLabel.text = item
-            selectedUnitTo = [item ?? "TRY"]
+            selectedUnitTo = [item ?? "---"]
             
-            item == "---" ? presenter?.updateCurencies(from: selectedUnitFrom.first ?? "TRY")
-            : presenter?.convertCurrencies(from: selectedUnitFrom.first ?? "", to: item ?? "", amount: Int(homeView.amountTextField.text ?? "1") ?? 1)
+            filteredCurrenciesList = selectedUnitTo.first == "---" ? currenciesList : filteredCurrenciesList.filter({$0.key.contains(item ?? "TRY")})
+            homeView.tableView.reloadData()
             dismiss(animated: true)
         }
+    }
+}
+
+extension MainVC: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let text = textField.text, text.count != 0 else {
+            filteredCurrenciesList = currenciesList
+            homeView.tableView.reloadData()
+            return
+        }
+        let list = selectedUnitTo.first == "---" ? currenciesList : currenciesList.filter({$0.key.contains(selectedUnitTo.first ?? "TRY")})
+        filteredCurrenciesList = list.compactMap({MainEntityResult(key: $0.key, value: $0.value * (Double(text) ?? 1))})
+        homeView.tableView.reloadData()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard textField.text?.count == 0 else {
+            return
+        }
+        filteredCurrenciesList = currenciesList
+        homeView.amountTextField.text = "1"
+        homeView.tableView.reloadData()
     }
 }

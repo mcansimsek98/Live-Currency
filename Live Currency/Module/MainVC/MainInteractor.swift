@@ -33,6 +33,5 @@ class MainInteractor: MainInteractorDelegate {
                 guard let self else { return }
                 presenter?.interactorDidFetchCurrency(with: .success(response))
             }).store(in: &cancellables)
-
     }
 }

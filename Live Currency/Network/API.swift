@@ -23,7 +23,7 @@ extension API : TargetType {
     var path: String {
         switch self {
         case .fetchAll:
-            return "fetch-all"
+            return "fetch-all
         }
     }
     
