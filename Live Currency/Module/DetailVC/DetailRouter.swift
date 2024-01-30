@@ -11,13 +11,13 @@ typealias DetailEntryPoint = DetailVCDelegate & UIViewController
 
 protocol DetailRouterDelegate: AnyObject {
     var entry: DetailEntryPoint? { get }
-    static func start(unitName: String?) -> DetailRouterDelegate
+    static func start(unitName: String?, from: String?) -> DetailRouterDelegate
 }
 
 class DetailRouter: DetailRouterDelegate {
     var entry: DetailEntryPoint?
     
-    static func start(unitName: String?) -> DetailRouterDelegate {
+    static func start(unitName: String?, from: String?) -> DetailRouterDelegate {
         let router = DetailRouter()
         let view: DetailVCDelegate = DetailVC()
         let interactor: DetailInteractorDelegate = DetailInteractor()
@@ -25,7 +25,7 @@ class DetailRouter: DetailRouterDelegate {
         
         view.presenter = presenter
         view.unitName = unitName
-        
+        view.from = from
         interactor.presenter = presenter
         
         presenter.router = router

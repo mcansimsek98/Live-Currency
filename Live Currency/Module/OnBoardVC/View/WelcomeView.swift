@@ -30,7 +30,7 @@ final class WelcomeView: UIView {
         lbl.numberOfLines = 1
         lbl.textAlignment = .center
         lbl.font = Theme.defaultTheme.themeFont.headlineFont.boldVersion
-        lbl.textColor = Theme.defaultTheme.themeColor.backgroundColor
+        lbl.textColor = Theme.defaultTheme.themeColor.textColor
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -40,7 +40,7 @@ final class WelcomeView: UIView {
         lbl.text = wellcomeText
         lbl.numberOfLines = 0
         lbl.font = Theme.defaultTheme.themeFont.caption.boldVersion
-        lbl.textColor = Theme.defaultTheme.themeColor.backgroundColor
+        lbl.textColor = Theme.defaultTheme.themeColor.textColor
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -49,7 +49,7 @@ final class WelcomeView: UIView {
         let btn = UIButton()
         btn.setImage( .arrowRight, for: .normal)
         btn.setTitleColor(Theme.defaultTheme.themeColor.textColor, for: .normal)
-        btn.backgroundColor = .background3
+        btn.backgroundColor = .buttonBackground
         btn.layer.cornerRadius = Radius.small.rawValue
         btn.addAction(arrowRightBtnAction, for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
@@ -63,7 +63,7 @@ final class WelcomeView: UIView {
     
     init() {
         super.init(frame: .zero)
-        backgroundColor = Theme.defaultTheme.themeColor.primaryColor
+        backgroundColor = Theme.defaultTheme.themeColor.backgroundColor
         addSubViews(headerLbl, onBoardImage, wellcomeLbl, arrowRightBtn)
         configureConstraint()
     }
@@ -75,7 +75,7 @@ final class WelcomeView: UIView {
     
     private func configureConstraint() {
         NSLayoutConstraint.activate([
-            headerLbl.bottomAnchor.constraint(equalTo: onBoardImage.topAnchor, constant: -Padding.extraLarge.rawValue),
+            headerLbl.bottomAnchor.constraint(equalTo: onBoardImage.topAnchor, constant: -Padding.extraLarge.rawValue * 1.4),
             headerLbl.centerXAnchor.constraint(equalTo: centerXAnchor),
             headerLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9),
             
@@ -84,7 +84,7 @@ final class WelcomeView: UIView {
             onBoardImage.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -Padding.extraLarge.rawValue),
             onBoardImage.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.3),
             
-            wellcomeLbl.topAnchor.constraint(equalTo: onBoardImage.bottomAnchor, constant: Padding.extraLarge.rawValue * 2),
+            wellcomeLbl.bottomAnchor.constraint(equalTo: arrowRightBtn.topAnchor, constant: -Padding.extraLarge.rawValue),
             wellcomeLbl.centerXAnchor.constraint(equalTo: centerXAnchor),
             wellcomeLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9),
             

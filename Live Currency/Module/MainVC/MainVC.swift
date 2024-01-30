@@ -66,7 +66,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = filteredCurrenciesList.compactMap({ ($0.key, $0.value)})[indexPath.row]
-        presenter?.gotoDetailVC(unitName: item.0)
+        presenter?.gotoDetailVC(unitName: item.0, from: homeView.unitLabel.text ?? "")
     }
 }
 
@@ -99,6 +99,8 @@ extension MainVC: HomeViewDelegate {
             guard let self else { return }
             homeView.unitLabel.text = item
             selectedUnitFrom = [item ?? "TRY"]
+            homeView.unitSecondLabel.text = "---"
+            selectedUnitTo = []
             presenter?.updateCurencies(from: item ?? "TRY")
             dismiss(animated: true)
         }
@@ -117,7 +119,7 @@ extension MainVC: HomeViewDelegate {
             homeView.unitSecondLabel.text = item
             selectedUnitTo = [item ?? "---"]
             
-            filteredCurrenciesList = selectedUnitTo.first == "---" ? currenciesList : filteredCurrenciesList.filter({$0.key.contains(item ?? "TRY")})
+            filteredCurrenciesList = selectedUnitTo.first == "---" ? currenciesList : currenciesList.filter({$0.key.contains(item ?? "TRY")})
             homeView.tableView.reloadData()
             dismiss(animated: true)
         }

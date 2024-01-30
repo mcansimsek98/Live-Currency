@@ -13,7 +13,7 @@ protocol MainRouterDelegate: AnyObject {
     var entry: MainEntryPoint? { get }
     
     static func start() -> MainRouterDelegate
-    func navigateToDetail(from view: MainVCDelegate?, _ unitName: String)
+    func navigateToDetail(from view: MainVCDelegate?, _ unitName: String, _ from: String?)
 }
 
 class MainRouter: MainRouterDelegate {
@@ -36,8 +36,8 @@ class MainRouter: MainRouterDelegate {
         return router
     }
     
-    func navigateToDetail(from view: MainVCDelegate?, _ unitName: String) {
-        let detailRouter = DetailRouter.start(unitName: unitName)
+    func navigateToDetail(from view: MainVCDelegate?, _ unitName: String, _ from: String?) {
+        let detailRouter = DetailRouter.start(unitName: unitName, from: from)
         guard let vc = view as? UIViewController,
               let destinationVC = detailRouter.entry else { return }
         vc.navigationController?.pushViewController(destinationVC, animated: true)

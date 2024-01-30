@@ -12,7 +12,7 @@ protocol MainPresenterDelegate: AnyObject {
     var view: MainVCDelegate? { get set }
     var interactor: MainInteractorDelegate? { get set }
     
-    func gotoDetailVC(unitName: String)
+    func gotoDetailVC(unitName: String, from: String)
     func interactorDidFetchCurrency(with result: Result<MainEntity, Error>)
     func updateCurencies(from: String)
 }
@@ -26,8 +26,8 @@ class MainPresenter: MainPresenterDelegate {
         }
     }
     
-    func gotoDetailVC(unitName: String) {
-        router?.navigateToDetail(from: view, unitName)
+    func gotoDetailVC(unitName: String, from: String) {
+        router?.navigateToDetail(from: view, unitName, from)
     }
     
     func updateCurencies(from: String) {

@@ -37,6 +37,8 @@
 		B20C3E5A2B5EEEC9005AFCB7 /* CurrenciesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E592B5EEEC9005AFCB7 /* CurrenciesList.swift */; };
 		B20C3E602B5F0E3F005AFCB7 /* CurrenciesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E5F2B5F0E3F005AFCB7 /* CurrenciesCell.swift */; };
 		B20C3E622B5FAD70005AFCB7 /* HomeViewTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E612B5FAD70005AFCB7 /* HomeViewTVCell.swift */; };
+		B23BE6A82B612F1200A6840A /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = B23BE6A72B612F1200A6840A /* DGCharts */; };
+		B23BE6AA2B612F1200A6840A /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B23BE6A92B612F1200A6840A /* DGChartsDynamic */; };
 		B29502B12B5FE205001FBEEE /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B02B5FE205001FBEEE /* OnboardPresenter.swift */; };
 		B29502B32B5FE224001FBEEE /* OnboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B22B5FE224001FBEEE /* OnboardRouter.swift */; };
 		B29502B52B5FE22C001FBEEE /* OnboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B42B5FE22C001FBEEE /* OnboardVC.swift */; };
@@ -47,6 +49,8 @@
 		B29502C12B60337F001FBEEE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502C02B60337F001FBEEE /* DetailPresenter.swift */; };
 		B29502C32B60338E001FBEEE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502C22B60338E001FBEEE /* DetailInteractor.swift */; };
 		B29502C52B60339A001FBEEE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502C42B60339A001FBEEE /* DetailRouter.swift */; };
+		B2ED0D892B63C9F00052B69D /* TimeSeriusEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED0D882B63C9F00052B69D /* TimeSeriusEntity.swift */; };
+		B2ED0D8C2B63D8390052B69D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED0D8B2B63D8390052B69D /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +94,8 @@
 		B29502C02B60337F001FBEEE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		B29502C22B60338E001FBEEE /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		B29502C42B60339A001FBEEE /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		B2ED0D882B63C9F00052B69D /* TimeSeriusEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriusEntity.swift; sourceTree = "<group>"; };
+		B2ED0D8B2B63D8390052B69D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23BE6AA2B612F1200A6840A /* DGChartsDynamic in Frameworks */,
 				B20C3E4D2B5EE065005AFCB7 /* Moya in Frameworks */,
+				B23BE6A82B612F1200A6840A /* DGCharts in Frameworks */,
 				B20C3E4B2B5EE065005AFCB7 /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				B20C3E532B5EE9A5005AFCB7 /* MainEntity.swift */,
+				B2ED0D882B63C9F00052B69D /* TimeSeriusEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -311,12 +320,21 @@
 		B29502BD2B603354001FBEEE /* DetailVC */ = {
 			isa = PBXGroup;
 			children = (
+				B2ED0D8A2B63D82F0052B69D /* View */,
 				B29502BE2B60336F001FBEEE /* DetailVC.swift */,
 				B29502C02B60337F001FBEEE /* DetailPresenter.swift */,
 				B29502C22B60338E001FBEEE /* DetailInteractor.swift */,
 				B29502C42B60339A001FBEEE /* DetailRouter.swift */,
 			);
 			path = DetailVC;
+			sourceTree = "<group>";
+		};
+		B2ED0D8A2B63D82F0052B69D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2ED0D8B2B63D8390052B69D /* DetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +356,8 @@
 			packageProductDependencies = (
 				B20C3E4A2B5EE065005AFCB7 /* CombineMoya */,
 				B20C3E4C2B5EE065005AFCB7 /* Moya */,
+				B23BE6A72B612F1200A6840A /* DGCharts */,
+				B23BE6A92B612F1200A6840A /* DGChartsDynamic */,
 			);
 			productName = "Live Currency";
 			productReference = B20C3DF72B5E7966005AFCB7 /* Live Currency.app */;
@@ -369,6 +389,7 @@
 			mainGroup = B20C3DEE2B5E7966005AFCB7;
 			packageReferences = (
 				B20C3E492B5EE065005AFCB7 /* XCRemoteSwiftPackageReference "Moya" */,
+				B23BE6A62B612F1200A6840A /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = B20C3DF82B5E7966005AFCB7 /* Products */;
 			projectDirPath = "";
@@ -400,6 +421,7 @@
 				B20C3E272B5E8FD4005AFCB7 /* ButtonSize.swift in Sources */,
 				B29502BF2B60336F001FBEEE /* DetailVC.swift in Sources */,
 				B20C3E292B5E8FE7005AFCB7 /* FontSize.swift in Sources */,
+				B2ED0D892B63C9F00052B69D /* TimeSeriusEntity.swift in Sources */,
 				B20C3E572B5EEE49005AFCB7 /* BaseVC.swift in Sources */,
 				B20C3DFB2B5E7966005AFCB7 /* AppDelegate.swift in Sources */,
 				B20C3E462B5EDF3D005AFCB7 /* NetworkManager.swift in Sources */,
@@ -430,6 +452,7 @@
 				B20C3E322B5E90CB005AFCB7 /* UIFont+Extension.swift in Sources */,
 				B20C3E5A2B5EEEC9005AFCB7 /* CurrenciesList.swift in Sources */,
 				B29502C52B60339A001FBEEE /* DetailRouter.swift in Sources */,
+				B2ED0D8C2B63D8390052B69D /* DetailView.swift in Sources */,
 				B20C3E192B5E7CE1005AFCB7 /* MainInteractor.swift in Sources */,
 				B29502C12B60337F001FBEEE /* DetailPresenter.swift in Sources */,
 			);
@@ -656,6 +679,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		B23BE6A62B612F1200A6840A /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -668,6 +699,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B20C3E492B5EE065005AFCB7 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		B23BE6A72B612F1200A6840A /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B23BE6A62B612F1200A6840A /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+		B23BE6A92B612F1200A6840A /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B23BE6A62B612F1200A6840A /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

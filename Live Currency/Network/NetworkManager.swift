@@ -38,4 +38,8 @@ extension NetworkManager {
     func fetchAllCurrencies(from: String) -> Publisher<MainEntity> {
         return NetworkManager.shared.request(.fetchAll(from: from)).eraseToAnyPublisher()
     }
+    
+    func getTimeSerius(from: String, to: String) -> Publisher<TimeSeriusEntity> {
+        return NetworkManager.shared.request(.getTimeSeries(from: from, to: to)).eraseToAnyPublisher()
+    }
 }
