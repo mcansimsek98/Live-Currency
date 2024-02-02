@@ -11,7 +11,7 @@ extension UIAlertController {
     
     static func showCustomAlert(title: String?, message: String?, 
                                 hasSubtitles: Bool = false,
-                                items: [(UIImage?, String)],
+                                items: [AlertData],
                                 height: CGFloat = 300,
                                 selectedItems: [String],
                                 presentingViewController: UIViewController,

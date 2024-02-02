@@ -9,6 +9,6 @@ import Foundation
 
 struct TimeSeriusEntity: Codable {
     let start, end, interval, base: String?
-    let results: [String:[String: Double]]?
+    let results: [String: [String: Double]]?
     let ms: Int?
 }

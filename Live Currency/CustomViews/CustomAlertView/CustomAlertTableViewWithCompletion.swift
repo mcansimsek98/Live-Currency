@@ -9,7 +9,7 @@ import UIKit
 
 class CustomAlertTableViewWithCompletion: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let tableView = UITableView()
-    var items: [(UIImage?, String)] = []
+    var items: [AlertData] = []
     var selectedItems: [String] = []
     var hasSubtitle: Bool = false
     var didSelectItemHandler: ((String?, Int) -> Void)?
@@ -39,13 +39,17 @@ class CustomAlertTableViewWithCompletion: UIViewController, UITableViewDelegate,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrenciesCell", for: indexPath) as! CurrenciesCell
         let item = items[indexPath.row]
-        cell.configure(image: item.0, title: item.1)
-        cell.accessoryType = item.1 == selectedItems.first ? .checkmark : .none
+        cell.configure(image: item.image, title: item.title, description: item.description)
+        cell.accessoryType = item.title == selectedItems.first ? .checkmark : .none
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedItem = items[indexPath.row].1
+        let selectedItem = items[indexPath.row].title
         didSelectItemHandler?(selectedItem, indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Padding.extraLarge.rawValue * 1.3
     }
 }

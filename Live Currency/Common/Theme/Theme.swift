@@ -17,6 +17,7 @@ struct ThemeColor {
     let secondaryColor: UIColor
     let buttonBackgroundColor: UIColor
     let textColor: UIColor
+    let warningTextColor: UIColor
     let backgroundColor: UIColor
     let background2Color: UIColor
     let background3Color: UIColor
@@ -37,6 +38,7 @@ extension Theme {
                                     secondaryColor: .gray,
                                     buttonBackgroundColor: UIColor.buttonBackground,
                                     textColor: .white,
+                                    warningTextColor: UIColor.warning,
                                     backgroundColor: UIColor.background,
                                     background2Color: UIColor.background2,
                                     background3Color: UIColor.background3),

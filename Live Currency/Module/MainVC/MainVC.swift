@@ -16,7 +16,7 @@ protocol MainVCDelegate: AnyObject {
 class MainVC: BaseVC, MainVCDelegate {
     var presenter: MainPresenterDelegate?
     private let homeView = HomeView()
-    private var selectedUnitFrom: [String] = ["TRY"]
+    private var selectedUnitFrom: [String] = ["EUR"]
     private var selectedUnitTo: [String] = ["---"]
     private var currenciesList: [MainEntityResult] = []
     private var filteredCurrenciesList: [MainEntityResult] = []
@@ -59,7 +59,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewTVCell", for: indexPath) as! HomeViewTVCell
         let item = filteredCurrenciesList.compactMap({ ($0.key, $0.value)})[indexPath.row]
-        let from = "\(homeView.amountTextField.text ?? "1") \(homeView.unitLabel.text ?? "TRY")"
+        let from = "\(homeView.amountTextField.text ?? "1") \(homeView.unitLabel.text ?? "---")"
         cell.configure(title: item.0, from: from, to: String(format: "%.2f", item.1))
         return cell
     }
@@ -76,7 +76,7 @@ extension MainVC: HomeViewDelegate {
         homeView.amountTextField.text = "1"
         homeView.unitSecondLabel.text = "---"
         selectedUnitTo = []
-        presenter?.interactor?.getAllCurency(from: homeView.unitLabel.text ?? "TRY")
+        presenter?.interactor?.getAllCurency(from: homeView.unitLabel.text ?? "---")
     }
     
     func searchBtnAction(with searchText: String) {
@@ -92,23 +92,23 @@ extension MainVC: HomeViewDelegate {
     func unitBtnAction() {
         UIAlertController.showCustomAlert(title: "Please select currency",
                                           message: nil,
-                                          items: CurrenciesList.unitList.compactMap({($0.image, $0.name)}),
+                                          items: CurrenciesList.unitList.compactMap({AlertData(image: $0.image, title: $0.name, description: $0.fullName)}),
                                           selectedItems: selectedUnitFrom,
                                           presentingViewController: self)
         { [weak self] item, index in
             guard let self else { return }
             homeView.unitLabel.text = item
-            selectedUnitFrom = [item ?? "TRY"]
+            selectedUnitFrom = [item ?? "---"]
             homeView.unitSecondLabel.text = "---"
             selectedUnitTo = []
-            presenter?.updateCurencies(from: item ?? "TRY")
+            presenter?.updateCurencies(from: item ?? "---")
             dismiss(animated: true)
         }
     }
     
     func unitSecondBtnAction() {
-        var list = CurrenciesList.unitList.compactMap({($0.image, $0.name)})
-        list.insert((.currencyIcon, "---"), at: 0)
+        var list = CurrenciesList.unitList.compactMap({AlertData(image: $0.image, title: $0.name, description: $0.fullName)})
+        list.insert(AlertData(image: .currencyIcon, title: "---", description: ""), at: 0)
         UIAlertController.showCustomAlert(title: "Please select currency",
                                           message: nil,
                                           items: list,
@@ -119,7 +119,7 @@ extension MainVC: HomeViewDelegate {
             homeView.unitSecondLabel.text = item
             selectedUnitTo = [item ?? "---"]
             
-            filteredCurrenciesList = selectedUnitTo.first == "---" ? currenciesList : currenciesList.filter({$0.key.contains(item ?? "TRY")})
+            filteredCurrenciesList = selectedUnitTo.first == "---" ? currenciesList : currenciesList.filter({$0.key.contains(item ?? "---")})
             homeView.tableView.reloadData()
             dismiss(animated: true)
         }
@@ -133,7 +133,7 @@ extension MainVC: UITextFieldDelegate {
             homeView.tableView.reloadData()
             return
         }
-        let list = selectedUnitTo.first == "---" ? currenciesList : currenciesList.filter({$0.key.contains(selectedUnitTo.first ?? "TRY")})
+        let list = selectedUnitTo.first == "---" ? currenciesList : currenciesList.filter({$0.key.contains(selectedUnitTo.first ?? "---")})
         filteredCurrenciesList = list.compactMap({MainEntityResult(key: $0.key, value: $0.value * (Double(text) ?? 1))})
         homeView.tableView.reloadData()
     }

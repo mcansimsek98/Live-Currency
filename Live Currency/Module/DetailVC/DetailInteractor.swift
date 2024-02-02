@@ -24,7 +24,7 @@ class DetailInteractor: DetailInteractorDelegate {
                 guard let self else { return }
                 switch completion {
                 case .finished:
-                    print("Currencies fetched successfully.")
+                    break
                 case .failure(let error):
                     presenter?.interactorDidFetchTimeSerius(with: .failure(error))
                 }

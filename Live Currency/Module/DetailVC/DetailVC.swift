@@ -14,7 +14,7 @@ protocol DetailVCDelegate: AnyObject {
     var unitName: String? { get set }
     var from: String? { get set }
     
-    func update(with currencies: TimeSeriusEntity?, list: [ChartDataEntry])
+    func update(with currencies: TimeSeriusEntity?, list: ([ChartDataEntry], [BarChartDataEntry], IndexAxisValueFormatter))
     func update(with error: String)
 }
 
@@ -22,11 +22,12 @@ class DetailVC: BaseVC, DetailVCDelegate {
     var presenter: DetailPresenterDelegate?
     var unitName: String?
     var from: String?
+    private lazy var selectedUnit: [String] = [unitName ?? "---"]
     private var detailView: DetailView?
 
     override func loadView() {
         super.loadView()
-        detailView = DetailView(from: from, unitName: unitName)
+        detailView = DetailView()
         view = detailView
         detailView?.delegate = self
     }
@@ -35,8 +36,10 @@ class DetailVC: BaseVC, DetailVCDelegate {
         super.viewDidLoad()
     }
     
-    func update(with currencies: TimeSeriusEntity?, list: [ChartDataEntry]) {
-        detailView?.configureChart(dataEntries: list)
+    func update(with currencies: TimeSeriusEntity?, list: ([ChartDataEntry], [BarChartDataEntry], IndexAxisValueFormatter)) {
+        detailView?.dataEntries = list
+        detailView?.updateChart()
+        detailView?.updateInfoView(currencies, from, unitName)
     }
     
     func update(with error: String) {
@@ -45,6 +48,25 @@ class DetailVC: BaseVC, DetailVCDelegate {
 }
 
 extension DetailVC: DetailViewActionDelegate {
+    func unitSelectBtnAction() {
+        let currencyList = CurrenciesList.unitList.compactMap({(AlertData(image: $0.image, title: $0.name, description: $0.fullName))}).filter({ $0.title != from ?? ""})
+        UIAlertController.showCustomAlert(title: "Please select currency",
+                                          message: nil,
+                                          items: currencyList,
+                                          selectedItems: selectedUnit,
+                                          presentingViewController: self)
+        { [weak self] item, index in
+            guard let self else { return }
+            detailView?.titleLbl.text = item
+            selectedUnit = [item ?? "---"]
+            unitName = item
+            detailView?.chartDataInfoLbl.text = "\(from ?? "") to \(item ?? "") Rate Chart"
+
+            presenter?.updateCurencies(from: from ?? "", to: item ?? "")
+            dismiss(animated: true)
+        }
+    }
+    
     func backBtnAction() {
         goBackAction()
     }

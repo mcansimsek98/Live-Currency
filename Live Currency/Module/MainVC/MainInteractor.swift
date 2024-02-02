@@ -24,7 +24,7 @@ class MainInteractor: MainInteractorDelegate {
                 guard let self else { return }
                 switch completion {
                 case .finished:
-                    print("Currencies fetched successfully.")
+                    break
                 case .failure(let error):
                     presenter?.interactorDidFetchCurrency(with: .failure(error))
                 }

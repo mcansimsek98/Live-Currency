@@ -40,9 +40,9 @@ final class CurrenciesCell: UITableViewCell {
         ])
     }
     
-    public func configure(image: UIImage?, title: String) {
+    public func configure(image: UIImage?, title: String, description: String) {
         imageViewCell.image = image
-        titleLbl.text = title
+        titleLbl.text = title + " - " + description
         configureConstraint()
     }
 }

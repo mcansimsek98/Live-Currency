@@ -37,8 +37,6 @@
 		B20C3E5A2B5EEEC9005AFCB7 /* CurrenciesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E592B5EEEC9005AFCB7 /* CurrenciesList.swift */; };
 		B20C3E602B5F0E3F005AFCB7 /* CurrenciesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E5F2B5F0E3F005AFCB7 /* CurrenciesCell.swift */; };
 		B20C3E622B5FAD70005AFCB7 /* HomeViewTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C3E612B5FAD70005AFCB7 /* HomeViewTVCell.swift */; };
-		B23BE6A82B612F1200A6840A /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = B23BE6A72B612F1200A6840A /* DGCharts */; };
-		B23BE6AA2B612F1200A6840A /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B23BE6A92B612F1200A6840A /* DGChartsDynamic */; };
 		B29502B12B5FE205001FBEEE /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B02B5FE205001FBEEE /* OnboardPresenter.swift */; };
 		B29502B32B5FE224001FBEEE /* OnboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B22B5FE224001FBEEE /* OnboardRouter.swift */; };
 		B29502B52B5FE22C001FBEEE /* OnboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502B42B5FE22C001FBEEE /* OnboardVC.swift */; };
@@ -49,6 +47,13 @@
 		B29502C12B60337F001FBEEE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502C02B60337F001FBEEE /* DetailPresenter.swift */; };
 		B29502C32B60338E001FBEEE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502C22B60338E001FBEEE /* DetailInteractor.swift */; };
 		B29502C52B60339A001FBEEE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29502C42B60339A001FBEEE /* DetailRouter.swift */; };
+		B29509C42B6D7B5900ED8C60 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = B29509C32B6D7B5900ED8C60 /* DGCharts */; };
+		B29509C62B6D7B5900ED8C60 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B29509C52B6D7B5900ED8C60 /* DGChartsDynamic */; };
+		B29509C92B6D90DF00ED8C60 /* AlertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29509C82B6D90DF00ED8C60 /* AlertData.swift */; };
+		B29509CB2B6DA55800ED8C60 /* CustomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29509CA2B6DA55800ED8C60 /* CustomInfoView.swift */; };
+		B29509CD2B6DA57000ED8C60 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29509CC2B6DA57000ED8C60 /* DateValueFormatter.swift */; };
+		B29509CF2B6DA6A500ED8C60 /* UIDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29509CE2B6DA6A500ED8C60 /* UIDate+Extension.swift */; };
+		B29509D22B6DA6CE00ED8C60 /* ChartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29509D12B6DA6CE00ED8C60 /* ChartType.swift */; };
 		B2ED0D892B63C9F00052B69D /* TimeSeriusEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED0D882B63C9F00052B69D /* TimeSeriusEntity.swift */; };
 		B2ED0D8C2B63D8390052B69D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ED0D8B2B63D8390052B69D /* DetailView.swift */; };
 /* End PBXBuildFile section */
@@ -94,6 +99,11 @@
 		B29502C02B60337F001FBEEE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		B29502C22B60338E001FBEEE /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		B29502C42B60339A001FBEEE /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		B29509C82B6D90DF00ED8C60 /* AlertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertData.swift; sourceTree = "<group>"; };
+		B29509CA2B6DA55800ED8C60 /* CustomInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoView.swift; sourceTree = "<group>"; };
+		B29509CC2B6DA57000ED8C60 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		B29509CE2B6DA6A500ED8C60 /* UIDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extension.swift"; sourceTree = "<group>"; };
+		B29509D12B6DA6CE00ED8C60 /* ChartType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartType.swift; sourceTree = "<group>"; };
 		B2ED0D882B63C9F00052B69D /* TimeSeriusEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriusEntity.swift; sourceTree = "<group>"; };
 		B2ED0D8B2B63D8390052B69D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,9 +113,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23BE6AA2B612F1200A6840A /* DGChartsDynamic in Frameworks */,
+				B29509C62B6D7B5900ED8C60 /* DGChartsDynamic in Frameworks */,
 				B20C3E4D2B5EE065005AFCB7 /* Moya in Frameworks */,
-				B23BE6A82B612F1200A6840A /* DGCharts in Frameworks */,
+				B29509C42B6D7B5900ED8C60 /* DGCharts in Frameworks */,
 				B20C3E4B2B5EE065005AFCB7 /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +208,7 @@
 		B20C3E242B5E8FBE005AFCB7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B29509D02B6DA6C600ED8C60 /* Enums */,
 				B20C3E582B5EEE78005AFCB7 /* CurrenciesList */,
 				B20C3E2C2B5E9039005AFCB7 /* Theme */,
 				B20C3E252B5E8FC5005AFCB7 /* Size */,
@@ -233,6 +244,7 @@
 				B20C3E372B5E9101005AFCB7 /* UIScreen+Extension.swift */,
 				B20C3E3F2B5EB3E8005AFCB7 /* UIAlertController+AlertController.swift */,
 				B20C3E412B5EB984005AFCB7 /* UITextField+Extension.swift */,
+				B29509CE2B6DA6A500ED8C60 /* UIDate+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -241,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				B20C3E3C2B5EB34F005AFCB7 /* CustomAlertView */,
+				B29509CA2B6DA55800ED8C60 /* CustomInfoView.swift */,
+				B29509CC2B6DA57000ED8C60 /* DateValueFormatter.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -265,6 +279,7 @@
 		B20C3E522B5EE98B005AFCB7 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				B29509C72B6D90D600ED8C60 /* Model */,
 				B20C3E532B5EE9A5005AFCB7 /* MainEntity.swift */,
 				B2ED0D882B63C9F00052B69D /* TimeSeriusEntity.swift */,
 			);
@@ -329,6 +344,22 @@
 			path = DetailVC;
 			sourceTree = "<group>";
 		};
+		B29509C72B6D90D600ED8C60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B29509C82B6D90DF00ED8C60 /* AlertData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B29509D02B6DA6C600ED8C60 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B29509D12B6DA6CE00ED8C60 /* ChartType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		B2ED0D8A2B63D82F0052B69D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,8 +387,8 @@
 			packageProductDependencies = (
 				B20C3E4A2B5EE065005AFCB7 /* CombineMoya */,
 				B20C3E4C2B5EE065005AFCB7 /* Moya */,
-				B23BE6A72B612F1200A6840A /* DGCharts */,
-				B23BE6A92B612F1200A6840A /* DGChartsDynamic */,
+				B29509C32B6D7B5900ED8C60 /* DGCharts */,
+				B29509C52B6D7B5900ED8C60 /* DGChartsDynamic */,
 			);
 			productName = "Live Currency";
 			productReference = B20C3DF72B5E7966005AFCB7 /* Live Currency.app */;
@@ -389,7 +420,7 @@
 			mainGroup = B20C3DEE2B5E7966005AFCB7;
 			packageReferences = (
 				B20C3E492B5EE065005AFCB7 /* XCRemoteSwiftPackageReference "Moya" */,
-				B23BE6A62B612F1200A6840A /* XCRemoteSwiftPackageReference "Charts" */,
+				B29509C22B6D7B5900ED8C60 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = B20C3DF82B5E7966005AFCB7 /* Products */;
 			projectDirPath = "";
@@ -418,10 +449,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B20C3E482B5EDF4B005AFCB7 /* API.swift in Sources */,
+				B29509CB2B6DA55800ED8C60 /* CustomInfoView.swift in Sources */,
+				B29509D22B6DA6CE00ED8C60 /* ChartType.swift in Sources */,
+				B29509CD2B6DA57000ED8C60 /* DateValueFormatter.swift in Sources */,
 				B20C3E272B5E8FD4005AFCB7 /* ButtonSize.swift in Sources */,
 				B29502BF2B60336F001FBEEE /* DetailVC.swift in Sources */,
 				B20C3E292B5E8FE7005AFCB7 /* FontSize.swift in Sources */,
 				B2ED0D892B63C9F00052B69D /* TimeSeriusEntity.swift in Sources */,
+				B29509CF2B6DA6A500ED8C60 /* UIDate+Extension.swift in Sources */,
 				B20C3E572B5EEE49005AFCB7 /* BaseVC.swift in Sources */,
 				B20C3DFB2B5E7966005AFCB7 /* AppDelegate.swift in Sources */,
 				B20C3E462B5EDF3D005AFCB7 /* NetworkManager.swift in Sources */,
@@ -436,6 +471,7 @@
 				B20C3E3E2B5EB35D005AFCB7 /* CustomAlertTableViewWithCompletion.swift in Sources */,
 				B20C3DFD2B5E7966005AFCB7 /* SceneDelegate.swift in Sources */,
 				B20C3E342B5E90E1005AFCB7 /* UIView+Extension.swift in Sources */,
+				B29509C92B6D90DF00ED8C60 /* AlertData.swift in Sources */,
 				B29502B52B5FE22C001FBEEE /* OnboardVC.swift in Sources */,
 				B20C3E542B5EE9A5005AFCB7 /* MainEntity.swift in Sources */,
 				B29502BC2B5FFBA5001FBEEE /* OnBoardInteractor.swift in Sources */,
@@ -679,7 +715,7 @@
 				minimumVersion = 15.0.3;
 			};
 		};
-		B23BE6A62B612F1200A6840A /* XCRemoteSwiftPackageReference "Charts" */ = {
+		B29509C22B6D7B5900ED8C60 /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {
@@ -700,14 +736,14 @@
 			package = B20C3E492B5EE065005AFCB7 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		B23BE6A72B612F1200A6840A /* DGCharts */ = {
+		B29509C32B6D7B5900ED8C60 /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B23BE6A62B612F1200A6840A /* XCRemoteSwiftPackageReference "Charts" */;
+			package = B29509C22B6D7B5900ED8C60 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGCharts;
 		};
-		B23BE6A92B612F1200A6840A /* DGChartsDynamic */ = {
+		B29509C52B6D7B5900ED8C60 /* DGChartsDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B23BE6A62B612F1200A6840A /* XCRemoteSwiftPackageReference "Charts" */;
+			package = B29509C22B6D7B5900ED8C60 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGChartsDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */

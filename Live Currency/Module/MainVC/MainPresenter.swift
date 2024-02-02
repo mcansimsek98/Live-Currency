@@ -22,7 +22,7 @@ class MainPresenter: MainPresenterDelegate {
     var view: MainVCDelegate?
     var interactor: MainInteractorDelegate? {
         didSet {
-            interactor?.getAllCurency(from: "TRY")
+            interactor?.getAllCurency(from: "EUR")
         }
     }
     

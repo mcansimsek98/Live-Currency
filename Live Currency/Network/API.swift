@@ -8,7 +8,7 @@
 import Foundation
 import Moya
 
-let api_key = "e2cb87c0ca-3f7ed96c4e-s7nrbu"
+let api_key = "dd089d52db-23f50e70a6-s84ge7"
 
 enum API {
     case fetchAll(from: String)

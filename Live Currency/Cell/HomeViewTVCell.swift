@@ -82,9 +82,9 @@ class HomeViewTVCell: UITableViewCell {
             stackView.bottomAnchor.constraint(equalTo: contentview.bottomAnchor, constant: -Padding.large.rawValue),
             
             titleLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.12),
-            fromLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.31),
+            fromLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3),
             arrowRightIV.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1),
-            toLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.31)
+            toLbl.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3)
         ])
     }
     

@@ -92,7 +92,7 @@ class HomeView: UIView {
     
     lazy var unitLabel: UILabel = {
         let lbl = UILabel()
-        lbl.text = "TRY"
+        lbl.text = "EUR"
         lbl.textAlignment = .center
         lbl.font = Theme.defaultTheme.themeFont.caption
         lbl.textColor = Theme.defaultTheme.themeColor.textColor
@@ -256,18 +256,7 @@ class HomeView: UIView {
     
     lazy var updateTime: String = "" {
         didSet {
-            let inputDateFormat = DateFormatter()
-            inputDateFormat.dateFormat = "yyyy-MM-dd HH:mm:ss"
-
-            let outputDateFormat = DateFormatter()
-            outputDateFormat.dateFormat = "dd.MM.yyyy HH:mm:ss"
-            outputDateFormat.timeZone = TimeZone(secondsFromGMT: 3 * 60 * 60)
-            
-            if let inputDate = inputDateFormat.date(from: updateTime) {
-                let gmt3Date = inputDate.addingTimeInterval(TimeInterval(TimeZone(secondsFromGMT: 3 * 60 * 60)?.secondsFromGMT(for: inputDate) ?? 0))
-                let outputDateString = outputDateFormat.string(from: gmt3Date)
-                updateLbl.text = "Updated: \(outputDateString)"
-            }
+            updateLbl.text = "Updated: " + Date.convertDate(date: updateTime, inputFormat: "yyyy-MM-dd HH:mm:ss", outputFormat: "dd.MM.yyyy HH:mm:ss")
         }
     }
     
