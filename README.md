@@ -43,5 +43,7 @@ Project is created with:
   <td><img src="https://github.com/mcansimsek98/Live-Currency/assets/82471515/6f47e53e-6d92-4956-a25e-41ac538d0fb1" width=400 height=800></td>
   <td><img src="https://github.com/mcansimsek98/Live-Currency/assets/82471515/e4a10648-0ccd-4bbf-87bc-11982781ab86" width=400 height=800></td>
   <td><img src="https://github.com/mcansimsek98/Live-Currency/assets/82471515/0e92fe3b-e6ff-47c8-a875-e92dbc98bb9a" width=400 height=800></td>
+  <td><img src="https://github.com/mcansimsek98/Live-Currency/assets/82471515/8b8714c0-ae16-4b1c-a4f6-2b617ee423db" width=400 height=800></td>
+  <td><img src="https://github.com/mcansimsek98/Live-Currency/assets/82471515/ba8408e4-34fc-4695-9ed8-1262052e8560" width=400 height=800></td>
 <br>
 </br>
