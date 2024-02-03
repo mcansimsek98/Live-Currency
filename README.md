@@ -47,3 +47,17 @@ Project is created with:
   <td><img src="https://github.com/mcansimsek98/Live-Currency/assets/82471515/ba8408e4-34fc-4695-9ed8-1262052e8560" width=400 height=800></td>
 <br>
 </br>
+
+
+
+
+## Video
+https://github.com/mcansimsek98/Live-Currency/assets/82471515/95e736d3-b5c3-4f5a-98d7-6a19c50ba5ff
+
+
+
+
+
+
+
+
