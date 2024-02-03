@@ -1,5 +1,3 @@
-Development in progress...
-
 <h1 align="center">
   <br>
  <img src="https://github.com/mcansimsek98/Live-Currency/assets/82471515/82038da2-e787-4b78-8d2c-435b37958b11" alt="Live Currency" width="200">
